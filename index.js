@@ -1,4 +1,7 @@
+
 /**
+ * 读取目标文件夹的配置
+ *
  * config.default.js / config.default.json
  * config.qa.js / config.qa.json
  * config.pre.js / config.pre.json
@@ -11,7 +14,6 @@
  * const config = new GracefulConfig({
  *  path: './config/',
  *  prefix: 'matrix',
- *  defaultConfig: {}
  * });
  *
  * 1.不传任何参数，获取所有配置
@@ -22,16 +24,10 @@
  * config.getConfig('foo.bar')
  * config.getConfig('foo[0].name')
  *
- * 冻结配置
+ * 3. merge 方法
+ * 4. 冻结配置
  */
-const { merge } = require("lodash");
 
-class GracefulConfig {
-  constructor(options = {}) {
-    this.options = options;
-  }
-
-  getConfig(key) {}
-}
+const GracefulConfig = require('./lib/GracefulConfig');
 
 module.exports = GracefulConfig;
