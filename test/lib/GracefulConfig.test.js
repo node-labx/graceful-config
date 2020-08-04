@@ -9,7 +9,7 @@ test('new a instance', (t) => {
   process.env.NODE_ENV = 'qa';
 
   const gracefultConfig = new GracefulConfig({
-    path: './test/config-2',
+    path: './test/fixtures/config-2',
     prefix: 'test',
   });
 
@@ -22,7 +22,7 @@ test('deep freeze config', t => {
   process.env.NODE_ENV = 'pre';
 
   const gracefultConfig = new GracefulConfig({
-    path: './test/config-1',
+    path: './test/fixtures/config-1',
     prefix: 'test',
   });
 
@@ -40,7 +40,7 @@ test('config file *.json overwrite config *.js', (t) => {
   process.env.NODE_ENV = 'qa';
 
   const gracefultConfig = new GracefulConfig({
-    path: './test/config-2',
+    path: './test/fixtures/config-2',
     prefix: 'test',
   });
 
@@ -51,12 +51,12 @@ test('merge configs', (t) => {
   process.env.NODE_ENV = 'qa';
 
   const gracefultConfig1 = new GracefulConfig({
-    path: './test/config-1',
+    path: './test/fixtures/config-1',
     prefix: 'test',
   });
 
   const gracefultConfig2 = new GracefulConfig({
-    path: './test/config-2',
+    path: './test/fixtures/config-2',
     prefix: 'test',
   });
 
@@ -69,7 +69,7 @@ test('merge plain object', (t) => {
   process.env.NODE_ENV = 'qa';
 
   const gracefultConfig = new GracefulConfig({
-    path: './test/config-1',
+    path: './test/fixtures/config-1',
     prefix: 'test',
   });
 
@@ -85,7 +85,7 @@ test('no right to read file', (t) => {
   process.env.NODE_ENV = 'qa';
 
   const gracefultConfig = new GracefulConfig({
-    path: './test/config-3',
+    path: './test/fixtures/config-3',
     prefix: 'config',
   });
 

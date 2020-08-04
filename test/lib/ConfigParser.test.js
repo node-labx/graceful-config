@@ -7,13 +7,13 @@ test.beforeEach(t => {
 });
 
 test('load javascript config file', (t) => {
-  const paserdObj = ConfigParser.parse(process.cwd() + '/test/config-1/test.default.js', '');
+  const paserdObj = ConfigParser.parse(process.cwd() + '/test/fixtures/config-1/test.default.js', '');
   t.is(paserdObj.key, 'value');
 });
 
 
 test('load json config file', (t) => {
-  const filepath = process.cwd() + '/test/config-2/test.default.json';
+  const filepath = process.cwd() + '/test/fixtures/config-2/test.default.json';
   const jsonContent = fs.readFileSync(filepath)
   const paserdObj = ConfigParser.parse(filepath, jsonContent);
   t.is(paserdObj.key, 'default value');
