@@ -2,7 +2,7 @@ const fs = require('fs');
 const test = require("ava");
 const ConfigParser = require("../../lib/ConfigParser");
 
-test.afterEach(t => {
+test.beforeEach(t => {
   process.env.NODE_ENV = undefined;
 });
 

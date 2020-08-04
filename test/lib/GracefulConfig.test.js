@@ -1,7 +1,7 @@
 const test = require("ava");
 const GracefulConfig = require("../..");
 
-test.afterEach(t => {
+test.beforeEach(t => {
   process.env.NODE_ENV = undefined;
 });
 

@@ -1,7 +1,7 @@
 const test = require("ava");
 const ConfigPathResolver = require("../../lib/ConfigPathResolver");
 
-test.afterEach(t => {
+test.beforeEach(t => {
   process.env.NODE_ENV = undefined;
 });
 
@@ -43,6 +43,17 @@ test('config directory doesn\'t exsit', (t) => {
   const configPath = resovler.getConfigPaths();
 
   t.is(configPath.length, 0);
+});
+
+test('resolve default and development config file', (t) => {
+
+  const resovler = new ConfigPathResolver({
+    path: "./test/config-1",
+    prefix: 'test',
+   });
+  const configPath = resovler.getConfigPaths();
+
+  t.is(configPath.length, 1);
 });
 
 
