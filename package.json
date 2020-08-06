@@ -1,6 +1,6 @@
 {
-  "name": "boilerplate-demo",
-  "version": "0.1.0",
+  "name": "graceful-config",
+  "version": "0.0.1-beta.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,17 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:node-labx/boilerplate.git"
+    "url": "git@github.com:node-labx/graceful-config.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/node-labx/boilerplate/issues"
+    "url": "https://github.com/node-labx/graceful-config/issues"
   },
-  "homepage": "https://github.com/node-labx/boilerplate#readme",
+  "homepage": "https://github.com/node-labx/graceful-config#readme",
   "devDependencies": {
     "ava": "^3.10.1",
     "np": "^6.3.2",
     "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "lodash": "^4.17.19"
   }
 }
